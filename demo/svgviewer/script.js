@@ -1,6 +1,6 @@
 var query, queryParams, scale, url;
 
-PDFJS.workerSrc = '../../scripts/pdf.worker.js';
+PDFJS.workerSrc = '/scripts/pdf.worker.js';
 
 query = document.location.href.replace(/^[^?]*(\?([^#]*))?(#.*)?/, '$2');
 
@@ -8,7 +8,7 @@ queryParams = query ? JSON.parse('{' + (query.split('&').map(function(a) {
   return a.split('=').map(decodeURIComponent).map(JSON.stringify).join(': ');
 }).join(',')) + '}') : {};
 
-url = queryParams.file || '../../PDF/test.pdf';
+url = queryParams.file || '/PDF/test.pdf';
 
 scale = +queryParams.scale || 1.5;
 

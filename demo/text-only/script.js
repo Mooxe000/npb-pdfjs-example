@@ -15,7 +15,7 @@
  */
 var PAGE_NUMBER, PAGE_SCALE, PDF_PATH, SVG_NS, buildSVG, pageLoaded;
 
-PDF_PATH = '../../PDF/test.pdf';
+PDF_PATH = '/PDF/test.pdf';
 
 PAGE_NUMBER = 1;
 

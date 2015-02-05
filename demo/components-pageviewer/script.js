@@ -19,7 +19,7 @@ if (!PDFJS.PDFViewer || !PDFJS.getDocument) {
   alert('Please build the library and components using\n' + '  `node make generic components`');
 }
 
-DEFAULT_URL = '../../PDF/test.pdf';
+DEFAULT_URL = '/PDF/test.pdf';
 
 PAGE_TO_VIEW = 1;
 

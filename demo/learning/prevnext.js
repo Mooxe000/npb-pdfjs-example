@@ -1,6 +1,6 @@
 var canvas, ctx, onNextPage, onPrevPage, pageNum, pageNumPending, pageRendering, pdfDoc, queueRenderPage, renderPage, scale, url;
 
-url = '../../PDF/test.pdf';
+url = '/PDF/test.pdf';
 
 pdfDoc = null;
 

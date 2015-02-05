@@ -1,6 +1,6 @@
 var url;
 
-url = '../../PDF/test.pdf';
+url = '/PDF/test.pdf';
 
 PDFJS.getDocument(url).then(function(pdf) {
   pdf.getPage(1).then(function(page) {
