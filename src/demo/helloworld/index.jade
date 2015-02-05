@@ -1,0 +1,13 @@
+doctype html
+html
+  head
+
+    link(rel="stylesheet", href="./style.css")
+  body
+
+    canvas#the-canvas
+
+    // In production, only one script (pdf.js) is necessary
+    // In production, change the content of PDFJS.workerSrc below
+    script(src="../../scripts/pdf.js")
+    script(src="./script.js")

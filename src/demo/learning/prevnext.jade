@@ -1,0 +1,30 @@
+doctype html
+html
+
+  head
+    meta(charset="UTF-8")
+    title Previous/Next example
+    link(rel="stylesheet", href="./style.css")
+
+  body
+
+    h1 "Previous/Next" example
+
+    div
+      button#prev Previous
+      button#next Next
+
+      span
+        | Page:
+        span#page_num
+        | /
+        span#page_count
+
+    div
+      canvas#the-canvas
+
+    // for legacy browsers add compatibility.js
+    //script(src="../../scripts/components/compatibility.js")
+    script(src="../../scripts/pdf.js")
+
+    script(src="./prevnext.js")
