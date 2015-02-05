@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Previous/Next example</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <h1>"Previous/Next" example</h1>
+    <div>
+      <button id="prev">Previous</button>
+      <button id="next">Next</button><span>Page:<span id="page_num"></span>/<span id="page_count"></span></span>
+    </div>
+    <div>
+      <canvas id="the-canvas"></canvas>
+    </div>
+    <!-- for legacy browsers add compatibility.js-->
+    <!--script(src="../../scripts/components/compatibility.js")-->
+    <script src="../../scripts/pdf.js"></script>
+    <script src="./prevnext.js"></script>
+  </body>
+</html>

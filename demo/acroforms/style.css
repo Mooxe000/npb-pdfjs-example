@@ -1,0 +1,31 @@
+.pdfpage {
+  border: solid 1px black;
+  left: 0;
+  margin: 10px;
+  position: relative;
+  top: 0;
+}
+.pdfpage > canvas {
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+.pdfpage > div {
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+.inputControl {
+  background: transparent;
+  border: 0px none;
+  margin: auto;
+  position: absolute;
+}
+.inputControl[type='checkbox'] {
+  margin: 0px;
+}
+.inputHint {
+  background: #cccccc;
+  opacity: 0.2;
+  position: absolute;
+}
