@@ -1,5 +1,5 @@
 var pdfWithFormsPath;
 
-PDFJS.workerSrc = '/scripts/pdf.worker.js';
+PDFJS.workerSrc = '/npb-pdfjs-example/scripts/pdf.worker.js';
 
-pdfWithFormsPath = '/PDF/test.pdf';
+pdfWithFormsPath = '/npb-pdfjs-example/PDF/test.pdf';

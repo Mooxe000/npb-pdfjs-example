@@ -1,6 +1,6 @@
-PDFJS.workerSrc = '/scripts/pdf.worker.js';
+PDFJS.workerSrc = '/npb-pdfjs-example/scripts/pdf.worker.js';
 
-PDFJS.getDocument('/PDF/test.pdf').then(function(pdf) {
+PDFJS.getDocument('/npb-pdfjs-example/PDF/test.pdf').then(function(pdf) {
   pdf.getPage(1).then(function(page) {
     var canvas, context, renderContext, scale, viewport;
     scale = 1.5;

@@ -1,6 +1,6 @@
 var query, queryParams, scale, url;
 
-PDFJS.workerSrc = '/scripts/pdf.worker.js';
+PDFJS.workerSrc = '/npb-pdfjs-example/scripts/pdf.worker.js';
 
 query = document.location.href.replace(/^[^?]*(\?([^#]*))?(#.*)?/, '$2');
 
