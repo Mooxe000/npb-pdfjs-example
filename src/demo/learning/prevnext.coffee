@@ -2,7 +2,7 @@
 # If absolute URL from the remote server is provided, configure the CORS
 # header on that server.
 #
-url = '/PDF/test.pdf'
+url = '/npb-pdfjs-example/PDF/test.pdf'
 #
 # Disable workers to avoid yet another cross-origin issue (workers need
 # the URL of the script to be loaded, and dynamically loading a cross-origin
