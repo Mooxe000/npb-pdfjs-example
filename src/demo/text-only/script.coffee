@@ -13,7 +13,7 @@
 # limitations under the License.
 ###
 
-PDF_PATH = '../../PDF/test.pdf'
+PDF_PATH = '/PDF/test.pdf'
 PAGE_NUMBER = 1
 PAGE_SCALE = 1.5
 SVG_NS = 'http://www.w3.org/2000/svg'

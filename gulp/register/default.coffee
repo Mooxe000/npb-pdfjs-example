@@ -2,4 +2,6 @@ runSequence = require 'run-sequence'
 
 module.exports = ->
 
-  runSequence 'clean', 'build'
+  runSequence 'clean'
+  , 'libs', 'build'
+  , 'watch', 'browsersync'

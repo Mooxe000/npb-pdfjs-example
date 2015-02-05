@@ -1,7 +1,7 @@
 # Specify the main script used to create a new PDF.JS web worker.
 # In production, leave this undefined or change it to point to the
 # combined `pdf.worker.js` file.
-PDFJS.workerSrc = '../../scripts/pdf.worker.js'
+PDFJS.workerSrc = '/scripts/pdf.worker.js'
 
 #
 # See README for overview
@@ -22,7 +22,7 @@ queryParams =
   ) + '}'
   else {}
 
-url = queryParams.file or '../../PDF/test.pdf'
+url = queryParams.file or '/PDF/test.pdf'
 scale = +queryParams.scale or 1.5
 
 #

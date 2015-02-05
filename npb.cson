@@ -23,7 +23,8 @@ Keywords: [
 # BOWER CONFIG
 bower:
   dependencies: []
-  devDependencies: []
+  devDependencies:
+    'pdfjs-dist': ''
 
 # NPM CONFIG
 npm:
@@ -44,7 +45,9 @@ npm:
       'gulp-jade'
       'gulp-less'
       'gulp-tap'
+      'gulp-watch'
       'gulp-plumber'
+      'browser-sync'
       'gulp-gh-pages'
     ]
   ]

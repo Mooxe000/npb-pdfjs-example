@@ -1,14 +1,14 @@
 # Specify the main script used to create a new PDF.JS web worker.
 # In production, leave this undefined or change it to point to the
 # combined `pdf.worker.js` file.
-PDFJS.workerSrc = '../../scripts/pdf.worker.js'
+PDFJS.workerSrc = '/scripts/pdf.worker.js'
 #
 # See README for overview
 #
 #
 # Fetch the PDF document from the URL using promises
 #
-PDFJS.getDocument '../../PDF/test.pdf'
+PDFJS.getDocument '/PDF/test.pdf'
 .then (pdf) ->
   # Using promise to fetch the page
   pdf.getPage 1

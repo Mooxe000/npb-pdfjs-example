@@ -27,7 +27,7 @@ if !PDFJS.PDFViewer or !PDFJS.getDocument
 # PDFJS.cMapUrl = '../../external/bcmaps/';
 # PDFJS.cMapPacked = true;
 
-DEFAULT_URL = '../../PDF/test.pdf'
+DEFAULT_URL = '/PDF/test.pdf'
 PAGE_TO_VIEW = 1
 SCALE = 0.8
 
