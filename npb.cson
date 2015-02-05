@@ -44,9 +44,8 @@ npm:
       'gulp-jade'
       'gulp-less'
       'gulp-tap'
-      'gulp-watch'
       'gulp-plumber'
-      'browser-sync'
+      'gulp-gh-pages'
     ]
   ]
 

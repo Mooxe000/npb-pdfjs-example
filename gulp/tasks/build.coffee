@@ -12,8 +12,6 @@ less = require 'gulp-less'
 #LessPluginAutoPrefix = require 'less-plugin-autoprefix'
 
 tap = require 'gulp-tap'
-#watch = require 'gulp-watch'
-#browserSync = require 'browser-sync'
 
 module.exports = ->
 
@@ -47,9 +45,6 @@ module.exports = ->
   .pipe coffee
     bare: true
   .pipe coffeeFilter.restore()
-
-  # browserSync
-#  .pipe browserSync.reload stream:true
 
   .pipe plumber.stop()
 
