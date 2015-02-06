@@ -1,31 +1,56 @@
-#container = document.getElementById 'viewerContainer'
-#pdfViewer = new PDFJS.PDFViewer
-#  container: container
-#
-#(
-#  httpinvoke 'http://localhost:8099/files/file'
-#  , 'GET'
-#  ,
-#    outputType: 'json',
-#    converters:
-#      'text json': JSON.parse
-#      'json text': JSON.stringify
-#).then (res) ->
-#  pdfData = atob res.body.file64
-#  pdfData
-#.then (pdfData) ->
-#  new Promise (resolve, reject) ->
+container = document.getElementById 'viewerContainer'
+pdfViewer = new PDFJS.PDFViewer
+  container: container
+container.addEventListener 'pagesinit', ->
+  # we can use pdfViewer now, e.g. let's change default scale.
+  pdfViewer.currentScaleValue = 'page-width'
+  return
+
+getPdfData = ->
+  new Promise (resolve, reject) ->
+    (
+      httpinvoke 'http://121.40.33.89:8099/files/file'
+      , 'POST'
+      ,
+        outputType: 'json',
+        converters:
+          'text json': JSON.parse
+          'json text': JSON.stringify
+    ).then (
+      (res) ->
+#        pdfData = atob res.body.file64
+        pdfData = res.body.file64
+        resolve pdfData
+    ), (
+      (err) ->
+        console.error 'Get pdfData error!', err
+        reject()
+    )
+
+fillInDom = (pdfData) ->
+  new Promise (resolve, reject) ->
 #    PDFJS.getDocument
 #      data: pdfData
-#    .then (pdf) ->
-#      if pdf
-#        # Document loaded, specifying document for the viewer.
-#        pdfViewer.setDocument pdfData
-#        resolve 'done'
-#      else
-#        reject 'error'
-#.then (cbdata) ->
-#  console.log cbdata
+    DEFAULT_URL = 'data:application/pdf;base64,' + pdfData
+    PDFJS.getDocument DEFAULT_URL
+    .then (
+      (pdf) ->
+        # Document loaded, specifying document for the viewer.
+        pdfViewer.setDocument pdf
+        resolve 'done'
+    ), (
+      (err) ->
+        console.error 'Fill in dom error!', err
+        reject 'error'
+    )
+
+getPdfData()
+.then (pdfData) -> fillInDom pdfData
+.then (
+  (cb_data) -> console.log cb_data
+), (err) ->
+  console.error err
+
 
 #    # Fetch the first page.
 #    pdf.getPage 1
