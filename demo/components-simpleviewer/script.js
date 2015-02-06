@@ -16,7 +16,7 @@
 var DEFAULT_URL, container, pdfViewer;
 
 if (!PDFJS.PDFViewer || !PDFJS.getDocument) {
-  alert('Please build the library and components using\n' + '  `node make generic components`');
+  alert("Please build the library and components using\n  `node make generic components`");
 }
 
 DEFAULT_URL = '/npb-pdfjs-example/PDF/test.pdf';
