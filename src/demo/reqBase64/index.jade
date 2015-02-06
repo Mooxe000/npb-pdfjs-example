@@ -1,0 +1,27 @@
+doctype html
+html(dir="ltr", mozdisallowselectionprint="", moznomarginboxes="")
+
+  head
+
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1")
+    meta(name="google", content="notranslate")
+
+    title PDF.js viewer using built components
+
+    link(rel="stylesheet", href="/npb-pdfjs-example/demo/reqBase64/style.css")
+    link(rel="stylesheet", href="/npb-pdfjs-example/scripts/components/pdf_viewer.css")
+
+body(tabindex="1")
+
+  //canvas#the-canvas
+  #viewerContainer
+    #viewer.pdfViewer
+
+  // for legacy browsers
+  script(src="/npb-pdfjs-example/scripts/httpinvoke.js")
+  script(src="/npb-pdfjs-example/scripts/components/compatibility.js")
+  script(src="/npb-pdfjs-example/scripts/pdf.js")
+  script(src="/npb-pdfjs-example/scripts/components/pdf_viewer.js")
+
+  script(src="/npb-pdfjs-example/demo/reqBase64/script.js")

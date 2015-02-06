@@ -14,8 +14,10 @@
 ###
 
 if !PDFJS.PDFViewer or !PDFJS.getDocument
-  alert 'Please build the library and components using\n' +
-    '  `node make generic components`'
+  alert """
+  Please build the library and components using
+    `node make generic components`
+  """
 
 # In cases when the pdf.worker.js is located at the different folder than the
 # pdf.js's one, or the pdf.js is executed via eval(), the workerSrc property
