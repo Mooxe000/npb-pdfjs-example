@@ -165,9 +165,10 @@ renderPage = (div, pdf, pageNumber, callback) ->
       reject 'error'
 
 #PDFJS.getDocument 'http://localhost:9000/PDF/test.pdf'
+PDFJS.getDocument 'http://fenyincloud.oss-cn-hangzhou.aliyuncs.com/pdf/test.pdf?Expires=1423830585&OSSAccessKeyId=Y4azACOX3BBdR0Qi&Signature=Zj0yslWvl2CJOt4SkpeHpO4u%2Bdo%3D'
 
-getPdfData()
-.then (pdfData) -> getPdfObj pdfData
+#getPdfData()
+#.then (pdfData) -> getPdfObj pdfData
 
 .then (pdf) ->
   # Rendering all pages starting from first
